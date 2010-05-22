@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+  <HEAD>
+    <TITLE>GardenTrader</TITLE>
+	<%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag :all %>
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+
+  </HEAD>
+  <BODY onload="initialize()" onunload="GUnload()">
+    <div id="frame">
+      <div class="hd">
+        <h1>GardenTrader</h1>
+        <p id="subHeader">What Are You Growing? <span id="subSubheader">What Are Your Neighbors Growing?</span></p>
+		<div id="user_nav">
+			<% if user_signed_in? %>
+				Signed in as <%= current_user.email %>. Not You?
+				<%= link_to "Sign Out", destroy_user_session_path %>
+			<% else %>
+				<%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
+			<% end %>
+			
+		</div>
+      </div>
+      <div class="bd">
+      <div id="navbar">
+        <ul>
+          <li><a <%= active_tab?('my_mail') %> href="my_mail">My<br />Mail</a></li>
+          <li><a <%= active_tab?('my_garden') %> href="my_garden">My<br/>Garden</a></li>
+          <li><a <%= active_tab?('my_neighborhood') %> href="my_neighborhood">My<br/>Neighborhood</a></li>
+          <li><a <%= active_tab?('the_market') %> href="the_market">The<br />Market</a></li>
+          <li><a <%= active_tab?('the_school') %> href="the_school">The<br/>School</a></li>
+          <li><a <%= active_tab?('garden_trader') %> href="garden_trader">Garden<br />Trader</a></li>
+        </ul>
+      </div>
+        <div id="mat">
+          <div class="hd">
+            <div id="breadcrumb"><%= yield :breadcrumb %></div>
+            <div id="utilBar"><%= yield :utilBar %></div>
+          </div>
+          <div class="bd">
+            <div id="content">
+              <div class="hd"><h2><%= params[:controller].humanize.titleize %></h2></div>
+              <div class="bd">
+				<% if flash[:notice] %>
+			    	<div class="notice"><%= flash[:notice] %></div>
+			    <% end %>
+              	<%= yield %>
+              </div>
+              <div class="ft">
+              </div>            
+            </div>
+          </div>
+          <div class="ft"></div>          
+        </div>
+      </div>
+      <div class="ft"></div>
+    </div>
+        
+</BODY>
+</HTML>
