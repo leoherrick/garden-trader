@@ -9,7 +9,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100522081137) do
+ActiveRecord::Schema.define(:version => 20100525022936) do
+
+  create_table "addresses", :force => true do |t|
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "crops", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "food_type_id"
+    t.date     "planted_date"
+    t.string   "quantity"
+    t.date     "harvest_date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "food_types", :force => true do |t|
+    t.string "name"
+  end
+
+  create_table "polygon_points", :force => true do |t|
+    t.integer "region_id"
+    t.string  "country"
+    t.string  "city"
+    t.string  "name"
+    t.float   "latitude"
+    t.float   "longitude"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                               :default => "", :null => false

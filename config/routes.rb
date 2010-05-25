@@ -47,6 +47,8 @@ GardenTrader::Application.routes.draw do |map|
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
   match 'my_mail' => 'my_mail#index'
   match 'my_garden' => 'my_garden#index'
   match 'my_neighborhood' => 'my_neighborhood#index'

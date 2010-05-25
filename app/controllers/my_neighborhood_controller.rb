@@ -5,7 +5,8 @@ class MyNeighborhoodController < ActionController::Base
   layout "gardentrader"
 
   def index
-    @title = 'My Neighborhood' 
+    @title = 'My Neighborhood'  
+    @address = User.find_by_email("leoherrick@gmail.com").address
   end
   
 end
