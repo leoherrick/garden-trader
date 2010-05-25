@@ -1,7 +1,7 @@
 namespace :loader do 
   
   desc "this loads up all polygon points for garden traders hoods"
-  task :polygons do 
+  task :polygons => :environment do 
   
 PolygonPoint.all.each {|x| x.destroy}
 
