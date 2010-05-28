@@ -5,6 +5,10 @@
 		var myLatLng = new google.maps.LatLng(37.840707, -122.251661);
 		var myOptions = {
 	    	zoom: 15,
+	
+			<%= if request.user_agent.include?("iPhone") then 
+			'draggable: false,'
+			end %>
 		    center: myLatLng,
 		    mapTypeId: google.maps.MapTypeId.ROADMAP,
 			mapTypeControl: false,
