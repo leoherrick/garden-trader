@@ -92,8 +92,9 @@ var setMapSize = function () {
 	$('#content .bd').height( bodyHeight - 174)
 	$('#content .bd, #map_canvas').width( ($('body').width() - 48) )	
 }
-setMapSize();
 $(window).resize(function() {
 	setMapSize();
 });
+setMapSize();
+
 </script>
