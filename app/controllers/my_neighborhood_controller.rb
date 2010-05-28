@@ -8,4 +8,5 @@ class MyNeighborhoodController < ActionController::Base
     @title = 'My Neighborhood'  
   end
   
+  
 end

@@ -29,7 +29,8 @@
 		
 		// build points for one set of the hoods
 		<% latLonArray = [] %>
-		<% Neighborhood.find_by_name(hood).polygon_points.each do |point| %>
+		<% @neighborhood = Neighborhood.find_by_name(hood) %>
+		<% @neighborhood.polygon_points.each do |point| %>
 			<% latLonArray << "new google.maps.LatLng(#{point.latitude}, #{point.longitude})" %>
 		<% end %> 
 
@@ -52,6 +53,17 @@
 		google.maps.event.addListener(GT.hoods["<%=hood%>"], 'mouseout', function(){
 			GT.hoods["<%=hood%>"].setOptions({fillColor:"#8fe97d"})
 		})
+		
+		google.maps.event.addListener(GT.hoods["<%=hood%>"], 'click', function(){
+			$.ajax({
+				type: "GET",
+				url: "/neighborhood/"+<%= @neighborhood = Neighborhood.find_by_name(hood).id %>+".js",
+				dataType: "json",
+				success: function(msg){
+					$('#mapDetail').html('<h1>'+msg.name+'</h1>')
+				}
+			})
+		})
 
 	<% end %>
 
@@ -73,7 +85,7 @@
 					  title:"User: "+userID,
 		          });
 
-				// on mouseclick, show infowindo for neighborhood
+				// on mouseclick, show infowindo for user
 					google.maps.event.addListener(marker, 'click', function(){
 						for (var key in GT.openInfowindows) {
 						   var obj = GT.openInfowindows[key];
@@ -97,6 +109,8 @@
 								});
 								infowindow.open(map,marker);
 								GT.openInfowindows[userID] = infowindow;
+								$('#mapDetail').html('<h1>'+msg.username+'</h1>')
+								
 						   }
 						 });
 					})
