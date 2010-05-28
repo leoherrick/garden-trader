@@ -77,9 +77,13 @@
 				    content: 'User: '+userID
 				});
 				google.maps.event.addListener(marker, 'click', function(){
-					$('.gmnoprint').hide();
+					for (var key in GT.openInfowindows) {
+					   var obj = GT.openInfowindows[key];
+					   obj.close();
+					}
+					
 					infowindow.open(map,marker);
-					GT.openInfowindows = infowindow;
+					GT.openInfowindows[userID] = infowindow;
 				})
 		        } else {
 		          // alert("Geocode was not successful for the following reason: " + status);
