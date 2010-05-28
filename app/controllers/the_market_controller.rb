@@ -1,2 +1,0 @@
-class TheMarketController < ApplicationController
-end

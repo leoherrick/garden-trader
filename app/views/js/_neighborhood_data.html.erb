@@ -58,27 +58,40 @@
 	
 	// mark nearest users in the area
 		geocoder = new google.maps.Geocoder();		// user the Geocoder service to convert address to lat lon
-		var image = '/images/leaf.png';			// set custom image for markers
-		var mapLocation = function (street, city, state) {
+		
+		var neighborImage = 'http://google-maps-icons.googlecode.com/files/garden.png';			// set custom image for markers
+		var homeImage = 'http://google-maps-icons.googlecode.com/files/home.png'
+		var marketImage = 'http://google-maps-icons.googlecode.com/files/convenience.png'
+		var mapLocation = function (street, city, state, imageURL, userID) {
 		    if (geocoder) {
 		      geocoder.geocode( { 'address': street+', '+city+', '+state}, function(results, status) {
 		        if (status == google.maps.GeocoderStatus.OK) {
 		          var marker = new google.maps.Marker({
 		              map: map, 
 		              position: results[0].geometry.location,
-					  icon:image
+					  icon:imageURL,
+					  title:"User: "+userID,
 		          });
-				// on mouseclick, show stats of neighborhood
-				google.maps.event.addListener(marker, 'click', function(){alert(street+city+state)})
+				// on mouseclick, show infowindo for neighborhood
+				var infowindow = new google.maps.InfoWindow({
+				    content: 'User: '+userID
+				});
+				google.maps.event.addListener(marker, 'click', function(){
+					$('.gmnoprint').hide();
+					infowindow.open(map,marker);
+					GT.openInfowindows = infowindow;
+				})
 		        } else {
 		          // alert("Geocode was not successful for the following reason: " + status);
 		        }
 		      });
 		    }
 		}
-		<% User.all.collect{|x| x.address}.each do |address| %>
-			mapLocation("<%= address.street_address%>", "<%= address.city%>", "<%= address.state %>");
+		<% User.find(:all, :offset => 1, :limit => 10).each do |user| %>
+			mapLocation("<%= user.address.street_address%>", "<%= user.address.city%>", "<%= user.address.state %>", neighborImage, "<%=user.id%>");
 		<% end %>
+		<% user = User.find(:first) %>
+			mapLocation("<%= user.address.street_address%>", "<%= user.address.city%>", "<%= user.address.state %>", homeImage, "<%=user.id%>");	
 
 	
 	// add test point
@@ -100,5 +113,8 @@ $(window).resize(function() {
 	setMapSize();
 });
 setMapSize();
+$(document).ready(function(){
+	initialize();	
+})
 
 </script>

@@ -276,3 +276,11 @@ margin-left:40px;
 	min-width:738px;
 	min-height:425px;
 }
+
+#mainImage{
+	height:200px;
+	width:200px;
+}
+#mainImage.garden{
+	background-image: url("/images/garden.png	");
+}

@@ -13,7 +13,7 @@ GardenTrader::Application.routes.draw do |map|
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+    resources :users
 
   # Sample resource route with options:
   #   resources :products do
@@ -52,8 +52,8 @@ GardenTrader::Application.routes.draw do |map|
   match 'my_mail' => 'my_mail#index'
   match 'my_garden' => 'my_garden#index'
   match 'my_neighborhood' => 'my_neighborhood#index'
-  match 'the_market' => 'the_market#index'
-  match 'the_school' => 'the_school#index'
+  match 'the_marketplace' => 'the_marketplace#index'
+  match 'the_community' => 'the_community#index'
   match 'garden_trader' => 'garden_trader#index'
 
   # You can have the root of your site routed with "root"
