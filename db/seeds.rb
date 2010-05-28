@@ -87,7 +87,7 @@ end
     :zip => "94618",
     :street_address => "5800 Ocean View Dr."
   )  
-  User.find_by_email("test6@test.com").update_attribute(:username, "Rick Agee")
+  User.find_by_email("test6@test.com").update_attribute(:username, "Tom and Benji")
 
 ## crop categories
 ["Apples",
