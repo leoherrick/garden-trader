@@ -61,6 +61,10 @@
 				dataType: "json",
 				success: function(msg){
 					$('#mapDetail').html('<h1>'+msg.name+'</h1>')
+					for (var key in GT.openInfowindows) {
+					   var obj = GT.openInfowindows[key];
+					   obj.close();
+					}
 				}
 			})
 		})
