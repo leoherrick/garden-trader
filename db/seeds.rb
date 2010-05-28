@@ -6,8 +6,14 @@
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Major.create(:name => 'Daley', :city => cities.first)
 
-## starter users
+## clear tables
   User.all.each{|u| u.destroy}
+  puts "cleared all users"
+  Address.all.each{|u| u.destroy}
+  puts "cleared all addresses"
+  
+  
+
 [{:email => "leoherrick@gmail.com", :password => "test12"},
     {:email => "test1@test.com", :password => "test12"},
     {:email => "test2@test.com", :password => "test12"}].each do |user|

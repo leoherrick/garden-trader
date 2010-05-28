@@ -253,7 +253,8 @@ margin-left:40px;
 	width:300px;
 	position:absolute;
 	z-index:1000;
-	background-color:white
+	background-color:white;
+	min-height:425px;
 }
 #close, #open {
 	position:absolute;
@@ -269,4 +270,9 @@ margin-left:40px;
 	left:0px;
 	z-index:998;
 	background-image: url("/images/open.png");
+}
+
+#map_canvas {
+	min-width:738px;
+	min-height:425px;
 }
