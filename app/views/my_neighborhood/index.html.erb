@@ -1,4 +1,13 @@
-<div id="map_canvas" style="width: 700px; height: 500px"></div>
+<div id="topbar">
+	<div id="open"></div>
+	<div id="panelbar">
+		<div id="close"></div>
+	</div>
+	<div id="mapbar"></div>
+</div>
+<div id="panel">
 
-<%= @address.street_address %>
+</div>
+<div id="map_canvas" style="min-width:738px;min-height:425px;"></div>
+
 <%= render :partial => "js/neighborhood_data" %>

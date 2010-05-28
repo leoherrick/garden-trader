@@ -7,6 +7,7 @@ gem 'rails', '3.0.0.beta3'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise', '1.1.rc0'
+gem 'GeoRuby', '1.3.4'
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100525022936) do
+ActiveRecord::Schema.define(:version => 20100526010740) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street_address"
@@ -35,11 +35,14 @@ ActiveRecord::Schema.define(:version => 20100525022936) do
     t.string "name"
   end
 
+  create_table "neighborhoods", :force => true do |t|
+    t.string "name"
+    t.string "city"
+    t.string "county"
+  end
+
   create_table "polygon_points", :force => true do |t|
-    t.integer "region_id"
-    t.string  "country"
-    t.string  "city"
-    t.string  "name"
+    t.integer "neighborhood_id"
     t.float   "latitude"
     t.float   "longitude"
   end

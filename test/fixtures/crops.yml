@@ -1,14 +1,14 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  farmer_id: 1
+  user_id: 1
   food_type_id: 1
   planted_date: 2010-05-22
   quantity: MyString
   harvest_date: 2010-05-22
 
 two:
-  farmer_id: 1
+  user_id: 1
   food_type_id: 1
   planted_date: 2010-05-22
   quantity: MyString

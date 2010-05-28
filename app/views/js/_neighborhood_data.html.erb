@@ -10,7 +10,10 @@
 			mapTypeControl: false,
 			mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU},
 			navigationControl: true,
-			navigationControlOptions: {style: google.maps.NavigationControlStyle.SMALL}   
+			navigationControlOptions: {
+				style: google.maps.NavigationControlStyle.ZOOM_PAN,
+		        position: google.maps.ControlPosition.TOP_RIGHT
+			}  			
 		};
 
 	// build map
@@ -18,26 +21,33 @@
 	
 	// set up hoods
 	// declare which hoods to map
-	<% [	{:name => "Rockridge", :stroke => "#FF0000", :fill => "fcb3b3"},
-			{:name => "Shafter", :stroke => "#5858d4", :fill => "a9a9f7"},
-			{:name => "Temescal", :stroke => "#FF0000", :fill => "fcb3b3"}	].each do |hood| %>
+	<% ["Rockridge","Shafter","Temescal"].each do |hood| %>
 		
 		// build points for one set of the hoods
 		<% latLonArray = [] %>
-		<% PolygonPoint.find_all_by_name(hood[:name]).each do |point| %>
-			<% latLonArray << "new google.maps.LatLng(#{point.longitude}, #{point.latitude})" %>
+		<% Neighborhood.find_by_name(hood).polygon_points.each do |point| %>
+			<% latLonArray << "new google.maps.LatLng(#{point.latitude}, #{point.longitude})" %>
 		<% end %> 
 
 		// build the polygon for one hood
-		GT.hoods.<%=hood[:name]%> = new google.maps.Polygon({
+		GT.hoods["<%=hood%>"] = new google.maps.Polygon({
 		     paths: [<%= latLonArray.join(", ")%>],
-		     strokeColor: "<%= hood[:stroke] %>",
+		     strokeColor: "#FF0000",
 		     strokeOpacity: 0.8,
 		     strokeWeight: 2,
-		     fillColor: "<%= hood[:fill] %>",
-		     fillOpacity: 0.25
+		     fillColor: "#8fe97d",
+		     fillOpacity: 0.15
 		})
-		GT.hoods.<%=hood[:name]%>.setMap(map);
+		GT.hoods["<%=hood%>"].setMap(map);
+		
+		// on mouseover, highlight neighborhood
+		google.maps.event.addListener(GT.hoods["<%=hood%>"], 'mouseover', function(){
+			GT.hoods["<%=hood%>"].setOptions({fillColor:"yellow"})
+		})
+		// on mouseout, unhighlight neighborhood
+		google.maps.event.addListener(GT.hoods["<%=hood%>"], 'mouseout', function(){
+			GT.hoods["<%=hood%>"].setOptions({fillColor:"#8fe97d"})
+		})
 
 	<% end %>
 
@@ -54,8 +64,10 @@
 		              position: results[0].geometry.location,
 					  icon:image
 		          });
+				// on mouseclick, show stats of neighborhood
+				google.maps.event.addListener(marker, 'click', function(){alert(street+city+state)})
 		        } else {
-		          alert("Geocode was not successful for the following reason: " + status);
+		          // alert("Geocode was not successful for the following reason: " + status);
 		        }
 		      });
 		    }
@@ -64,11 +76,24 @@
 			mapLocation("<%= address.street_address%>", "<%= address.city%>", "<%= address.state %>");
 		<% end %>
 
-	// on mouseover, highlight neighborhoods
-	// on mouseclick, show stats of neighborhood
-	// 
+	
+	// add test point
 
 }
+var togglePanel = function () {
+	$('#panel').animate({width:'toggle'},300)
+	$('#panelbar').animate({width:'toggle'},300)
+}
+$('#open, #close').click(togglePanel)
 
-	
+var setMapSize = function () {
+	var bodyHeight = $('body').height();
+	$('#map_canvas, #panel').height( bodyHeight - 199)	
+	$('#content .bd').height( bodyHeight - 174)
+	$('#content .bd, #map_canvas').width( ($('body').width() - 48) )	
+}
+setMapSize();
+$(window).resize(function() {
+	setMapSize();
+});
 </script>

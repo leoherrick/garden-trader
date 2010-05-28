@@ -1,15 +1,1094 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  country: MyString
-  city: MyString
-  name: MyString
-  latitude: 1
-  longitude: 1
 
-two:
-  country: MyString
-  city: MyString
-  name: MyString
-  latitude: 1
-  longitude: 1
+
+1:
+  longitude: <%= -122.25773494800 %>
+  latitude: <%= 37.84261201760 %>
+  neighborhood_id: 1
+
+2:
+  longitude: <%= -122.25752494900 %>
+  latitude: <%= 37.84289101600 %>
+  neighborhood_id: 1
+
+3:
+  longitude: <%= -122.25738194600 %>
+  latitude: <%= 37.84305601920 %>
+  neighborhood_id: 1
+
+4:
+  longitude: <%= -122.25700994900 %>
+  latitude: <%= 37.84356501690 %>
+  neighborhood_id: 1
+
+5:
+  longitude: <%= -122.25611594800 %>
+  latitude: <%= 37.84464201580 %>
+  neighborhood_id: 1
+
+6:
+  longitude: <%= -122.25604095000 %>
+  latitude: <%= 37.84473601930 %>
+  neighborhood_id: 1
+
+7:
+  longitude: <%= -122.25511594800 %>
+  latitude: <%= 37.84589801750 %>
+  neighborhood_id: 1
+
+8:
+  longitude: <%= -122.25497594900 %>
+  latitude: <%= 37.84607002050 %>
+  neighborhood_id: 1
+
+9:
+  longitude: <%= -122.25410594800 %>
+  latitude: <%= 37.84714001700 %>
+  neighborhood_id: 1
+
+10:
+  longitude: <%= -122.25404094700 %>
+  latitude: <%= 37.84723201800 %>
+  neighborhood_id: 1
+
+11:
+  longitude: <%= -122.25363594800 %>
+  latitude: <%= 37.84773401820 %>
+  neighborhood_id: 1
+
+12:
+  longitude: <%= -122.25233194600 %>
+  latitude: <%= 37.84931901890 %>
+  neighborhood_id: 1
+
+13:
+  longitude: <%= -122.25227195100 %>
+  latitude: <%= 37.84939401760 %>
+  neighborhood_id: 1
+
+14:
+  longitude: <%= -122.25227494800 %>
+  latitude: <%= 37.84945701770 %>
+  neighborhood_id: 1
+
+15:
+  longitude: <%= -122.25227894700 %>
+  latitude: <%= 37.84950302110 %>
+  neighborhood_id: 1
+
+16:
+  longitude: <%= -122.25228994700 %>
+  latitude: <%= 37.84962801850 %>
+  neighborhood_id: 1
+
+17:
+  longitude: <%= -122.25236694600 %>
+  latitude: <%= 37.85034801870 %>
+  neighborhood_id: 1
+
+18:
+  longitude: <%= -122.25243094800 %>
+  latitude: <%= 37.85089901640 %>
+  neighborhood_id: 1
+
+19:
+  longitude: <%= -122.25237894800 %>
+  latitude: <%= 37.85091701520 %>
+  neighborhood_id: 1
+
+20:
+  longitude: <%= -122.25187195000 %>
+  latitude: <%= 37.85088401640 %>
+  neighborhood_id: 1
+
+21:
+  longitude: <%= -122.25082794600 %>
+  latitude: <%= 37.85134401700 %>
+  neighborhood_id: 1
+
+22:
+  longitude: <%= -122.25067894900 %>
+  latitude: <%= 37.85139601680 %>
+  neighborhood_id: 1
+
+23:
+  longitude: <%= -122.24946894700 %>
+  latitude: <%= 37.85143901730 %>
+  neighborhood_id: 1
+
+24:
+  longitude: <%= -122.24845394500 %>
+  latitude: <%= 37.85163701730 %>
+  neighborhood_id: 1
+
+25:
+  longitude: <%= -122.24737994600 %>
+  latitude: <%= 37.85165701810 %>
+  neighborhood_id: 1
+
+26:
+  longitude: <%= -122.24615795000 %>
+  latitude: <%= 37.85177502050 %>
+  neighborhood_id: 1
+
+27:
+  longitude: <%= -122.24537494500 %>
+  latitude: <%= 37.85212101800 %>
+  neighborhood_id: 1
+
+28:
+  longitude: <%= -122.24493294900 %>
+  latitude: <%= 37.85185401790 %>
+  neighborhood_id: 1
+
+29:
+  longitude: <%= -122.24485478400 %>
+  latitude: <%= 37.85185301250 %>
+  neighborhood_id: 1
+
+30:
+  longitude: <%= -122.24481944900 %>
+  latitude: <%= 37.85185255650 %>
+  neighborhood_id: 1
+
+31:
+  longitude: <%= -122.24478683400 %>
+  latitude: <%= 37.85185213860 %>
+  neighborhood_id: 1
+
+32:
+  longitude: <%= -122.24469994900 %>
+  latitude: <%= 37.85185101620 %>
+  neighborhood_id: 1
+
+33:
+  longitude: <%= -122.24433445000 %>
+  latitude: <%= 37.85184587500 %>
+  neighborhood_id: 1
+
+34:
+  longitude: <%= -122.24398894900 %>
+  latitude: <%= 37.85184101730 %>
+  neighborhood_id: 1
+
+35:
+  longitude: <%= -122.24197495000 %>
+  latitude: <%= 37.85208002010 %>
+  neighborhood_id: 1
+
+36:
+  longitude: <%= -122.24195594800 %>
+  latitude: <%= 37.85203301870 %>
+  neighborhood_id: 1
+
+37:
+  longitude: <%= -122.24193894800 %>
+  latitude: <%= 37.85191201790 %>
+  neighborhood_id: 1
+
+38:
+  longitude: <%= -122.24193494500 %>
+  latitude: <%= 37.85174901630 %>
+  neighborhood_id: 1
+
+39:
+  longitude: <%= -122.24198794800 %>
+  latitude: <%= 37.85151401670 %>
+  neighborhood_id: 1
+
+40:
+  longitude: <%= -122.24201494900 %>
+  latitude: <%= 37.85140601580 %>
+  neighborhood_id: 1
+
+41:
+  longitude: <%= -122.24212294900 %>
+  latitude: <%= 37.85119501740 %>
+  neighborhood_id: 1
+
+42:
+  longitude: <%= -122.24228594900 %>
+  latitude: <%= 37.85099401730 %>
+  neighborhood_id: 1
+
+43:
+  longitude: <%= -122.24239994700 %>
+  latitude: <%= 37.85089601760 %>
+  neighborhood_id: 1
+
+44:
+  longitude: <%= -122.24255995000 %>
+  latitude: <%= 37.85081501700 %>
+  neighborhood_id: 1
+
+45:
+  longitude: <%= -122.24361994500 %>
+  latitude: <%= 37.85039701740 %>
+  neighborhood_id: 1
+
+46:
+  longitude: <%= -122.24394294600 %>
+  latitude: <%= 37.85025801790 %>
+  neighborhood_id: 1
+
+47:
+  longitude: <%= -122.24400794800 %>
+  latitude: <%= 37.85024401740 %>
+  neighborhood_id: 1
+
+48:
+  longitude: <%= -122.24339694600 %>
+  latitude: <%= 37.84932501670 %>
+  neighborhood_id: 1
+
+49:
+  longitude: <%= -122.24336294500 %>
+  latitude: <%= 37.84925101760 %>
+  neighborhood_id: 1
+
+50:
+  longitude: <%= -122.24335794600 %>
+  latitude: <%= 37.84919701700 %>
+  neighborhood_id: 1
+
+51:
+  longitude: <%= -122.24334794600 %>
+  latitude: <%= 37.84914001740 %>
+  neighborhood_id: 1
+
+52:
+  longitude: <%= -122.24335294800 %>
+  latitude: <%= 37.84907801660 %>
+  neighborhood_id: 1
+
+53:
+  longitude: <%= -122.24337195000 %>
+  latitude: <%= 37.84901301690 %>
+  neighborhood_id: 1
+
+54:
+  longitude: <%= -122.24339694600 %>
+  latitude: <%= 37.84897001500 %>
+  neighborhood_id: 1
+
+55:
+  longitude: <%= -122.24341994700 %>
+  latitude: <%= 37.84892501680 %>
+  neighborhood_id: 1
+
+56:
+  longitude: <%= -122.24340394900 %>
+  latitude: <%= 37.84890501820 %>
+  neighborhood_id: 1
+
+57:
+  longitude: <%= -122.24343694700 %>
+  latitude: <%= 37.84887801630 %>
+  neighborhood_id: 1
+
+58:
+  longitude: <%= -122.24348394900 %>
+  latitude: <%= 37.84883301790 %>
+  neighborhood_id: 1
+
+59:
+  longitude: <%= -122.24353294900 %>
+  latitude: <%= 37.84878701700 %>
+  neighborhood_id: 1
+
+60:
+  longitude: <%= -122.24356394900 %>
+  latitude: <%= 37.84874501750 %>
+  neighborhood_id: 1
+
+61:
+  longitude: <%= -122.24383194600 %>
+  latitude: <%= 37.84841501580 %>
+  neighborhood_id: 1
+
+62:
+  longitude: <%= -122.24402794800 %>
+  latitude: <%= 37.84817601570 %>
+  neighborhood_id: 1
+
+63:
+  longitude: <%= -122.24407394800 %>
+  latitude: <%= 37.84811701600 %>
+  neighborhood_id: 1
+
+64:
+  longitude: <%= -122.24412494900 %>
+  latitude: <%= 37.84806001560 %>
+  neighborhood_id: 1
+
+65:
+  longitude: <%= -122.24437894900 %>
+  latitude: <%= 37.84774801630 %>
+  neighborhood_id: 1
+
+66:
+  longitude: <%= -122.24456694600 %>
+  latitude: <%= 37.84728801940 %>
+  neighborhood_id: 1
+
+67:
+  longitude: <%= -122.24461694800 %>
+  latitude: <%= 37.84712601880 %>
+  neighborhood_id: 1
+
+68:
+  longitude: <%= -122.24479094800 %>
+  latitude: <%= 37.84683001890 %>
+  neighborhood_id: 1
+
+69:
+  longitude: <%= -122.24483594800 %>
+  latitude: <%= 37.84673001720 %>
+  neighborhood_id: 1
+
+70:
+  longitude: <%= -122.24481594700 %>
+  latitude: <%= 37.84657301670 %>
+  neighborhood_id: 1
+
+71:
+  longitude: <%= -122.24501094700 %>
+  latitude: <%= 37.84625601850 %>
+  neighborhood_id: 1
+
+72:
+  longitude: <%= -122.24534194700 %>
+  latitude: <%= 37.84573801610 %>
+  neighborhood_id: 1
+
+73:
+  longitude: <%= -122.24602394800 %>
+  latitude: <%= 37.84461801720 %>
+  neighborhood_id: 1
+
+74:
+  longitude: <%= -122.24610694800 %>
+  latitude: <%= 37.84446401710 %>
+  neighborhood_id: 1
+
+75:
+  longitude: <%= -122.24661994700 %>
+  latitude: <%= 37.84366801910 %>
+  neighborhood_id: 1
+
+76:
+  longitude: <%= -122.24671894900 %>
+  latitude: <%= 37.84351401990 %>
+  neighborhood_id: 1
+
+77:
+  longitude: <%= -122.24699995100 %>
+  latitude: <%= 37.84303101750 %>
+  neighborhood_id: 1
+
+78:
+  longitude: <%= -122.24742294900 %>
+  latitude: <%= 37.84237101660 %>
+  neighborhood_id: 1
+
+79:
+  longitude: <%= -122.24804794700 %>
+  latitude: <%= 37.84138401650 %>
+  neighborhood_id: 1
+
+80:
+  longitude: <%= -122.24910594800 %>
+  latitude: <%= 37.83968301750 %>
+  neighborhood_id: 1
+
+81:
+  longitude: <%= -122.24939594700 %>
+  latitude: <%= 37.83922601890 %>
+  neighborhood_id: 1
+
+82:
+  longitude: <%= -122.25014594900 %>
+  latitude: <%= 37.83803101820 %>
+  neighborhood_id: 1
+
+83:
+  longitude: <%= -122.25022895000 %>
+  latitude: <%= 37.83799501720 %>
+  neighborhood_id: 1
+
+84:
+  longitude: <%= -122.25072394500 %>
+  latitude: <%= 37.83721301900 %>
+  neighborhood_id: 1
+
+85:
+  longitude: <%= -122.25090494600 %>
+  latitude: <%= 37.83692901760 %>
+  neighborhood_id: 1
+
+86:
+  longitude: <%= -122.25099294800 %>
+  latitude: <%= 37.83679101860 %>
+  neighborhood_id: 1
+
+87:
+  longitude: <%= -122.25091194900 %>
+  latitude: <%= 37.83668001700 %>
+  neighborhood_id: 1
+
+88:
+  longitude: <%= -122.25102794800 %>
+  latitude: <%= 37.83650001680 %>
+  neighborhood_id: 1
+
+89:
+  longitude: <%= -122.25116694800 %>
+  latitude: <%= 37.83627101680 %>
+  neighborhood_id: 1
+
+90:
+  longitude: <%= -122.25120194800 %>
+  latitude: <%= 37.83621501570 %>
+  neighborhood_id: 1
+
+91:
+  longitude: <%= -122.25135695000 %>
+  latitude: <%= 37.84006701640 %>
+  neighborhood_id: 1
+
+92:
+  longitude: <%= -122.25136395000 %>
+  latitude: <%= 37.84036601660 %>
+  neighborhood_id: 1
+
+93:
+  longitude: <%= -122.25140894600 %>
+  latitude: <%= 37.84093201850 %>
+  neighborhood_id: 1
+
+94:
+  longitude: <%= -122.25149595000 %>
+  latitude: <%= 37.84173501810 %>
+  neighborhood_id: 1
+
+95:
+  longitude: <%= -122.25156694500 %>
+  latitude: <%= 37.84237301610 %>
+  neighborhood_id: 1
+
+96:
+  longitude: <%= -122.25157995000 %>
+  latitude: <%= 37.84255401900 %>
+  neighborhood_id: 1
+
+97:
+  longitude: <%= -122.25164794800 %>
+  latitude: <%= 37.84327501550 %>
+  neighborhood_id: 1
+
+98:
+  longitude: <%= -122.25167494500 %>
+  latitude: <%= 37.84347901830 %>
+  neighborhood_id: 1
+
+99:
+  longitude: <%= -122.25174294700 %>
+  latitude: <%= 37.84401601650 %>
+  neighborhood_id: 1
+
+100:
+  longitude: <%= -122.25177494600 %>
+  latitude: <%= 37.84434101610 %>
+  neighborhood_id: 1
+
+101:
+  longitude: <%= -122.25178694800 %>
+  latitude: <%= 37.84453401930 %>
+  neighborhood_id: 1
+
+102:
+  longitude: <%= -122.25180694900 %>
+  latitude: <%= 37.84474601620 %>
+  neighborhood_id: 1
+
+103:
+  longitude: <%= -122.25208795000 %>
+  latitude: <%= 37.84462702030 %>
+  neighborhood_id: 1
+
+104:
+  longitude: <%= -122.25281895100 %>
+  latitude: <%= 37.84434301840 %>
+  neighborhood_id: 1
+
+105:
+  longitude: <%= -122.25429494700 %>
+  latitude: <%= 37.84376301780 %>
+  neighborhood_id: 1
+
+106:
+  longitude: <%= -122.25440994700 %>
+  latitude: <%= 37.84373501720 %>
+  neighborhood_id: 1
+
+107:
+  longitude: <%= -122.25466294900 %>
+  latitude: <%= 37.84363801910 %>
+  neighborhood_id: 1
+
+108:
+  longitude: <%= -122.25537895000 %>
+  latitude: <%= 37.84336901780 %>
+  neighborhood_id: 1
+
+109:
+  longitude: <%= -122.25663995000 %>
+  latitude: <%= 37.84297001720 %>
+  neighborhood_id: 1
+
+110:
+  longitude: <%= -122.25685994900 %>
+  latitude: <%= 37.84290001640 %>
+  neighborhood_id: 1
+
+111:
+  longitude: <%= -122.25700994900 %>
+  latitude: <%= 37.84284901900 %>
+  neighborhood_id: 1
+
+112:
+  longitude: <%= -122.25753394700 %>
+  latitude: <%= 37.84267301830 %>
+  neighborhood_id: 1
+
+113:
+  longitude: <%= -122.25773494800 %>
+  latitude: <%= 37.84261201760 %>
+  neighborhood_id: 1
+
+
+114:
+  longitude: <%= -122.26559094800 %>
+  latitude: <%= 37.83767602020 %>
+  neighborhood_id: 2
+
+115:
+  longitude: <%= -122.26549594900 %>
+  latitude: <%= 37.83800101880 %>
+  neighborhood_id: 2
+
+116:
+  longitude: <%= -122.26540794700 %>
+  latitude: <%= 37.83823301860 %>
+  neighborhood_id: 2
+
+117:
+  longitude: <%= -122.26530094600 %>
+  latitude: <%= 37.83845901900 %>
+  neighborhood_id: 2
+
+118:
+  longitude: <%= -122.26524294800 %>
+  latitude: <%= 37.83856401630 %>
+  neighborhood_id: 2
+
+119:
+  longitude: <%= -122.26508795000 %>
+  latitude: <%= 37.83882201730 %>
+  neighborhood_id: 2
+
+120:
+  longitude: <%= -122.26486194600 %>
+  latitude: <%= 37.83917201670 %>
+  neighborhood_id: 2
+
+121:
+  longitude: <%= -122.26472794800 %>
+  latitude: <%= 37.83937401690 %>
+  neighborhood_id: 2
+
+122:
+  longitude: <%= -122.26459094900 %>
+  latitude: <%= 37.83953901930 %>
+  neighborhood_id: 2
+
+123:
+  longitude: <%= -122.26445094600 %>
+  latitude: <%= 37.83968901900 %>
+  neighborhood_id: 2
+
+124:
+  longitude: <%= -122.26422394700 %>
+  latitude: <%= 37.83992001670 %>
+  neighborhood_id: 2
+
+125:
+  longitude: <%= -122.26407095000 %>
+  latitude: <%= 37.84005802150 %>
+  neighborhood_id: 2
+
+126:
+  longitude: <%= -122.26386594600 %>
+  latitude: <%= 37.84023401970 %>
+  neighborhood_id: 2
+
+127:
+  longitude: <%= -122.26366395000 %>
+  latitude: <%= 37.84037801950 %>
+  neighborhood_id: 2
+
+128:
+  longitude: <%= -122.26352594800 %>
+  latitude: <%= 37.84047301650 %>
+  neighborhood_id: 2
+
+129:
+  longitude: <%= -122.26326494800 %>
+  latitude: <%= 37.84064801980 %>
+  neighborhood_id: 2
+
+130:
+  longitude: <%= -122.26289295100 %>
+  latitude: <%= 37.84087502120 %>
+  neighborhood_id: 2
+
+131:
+  longitude: <%= -122.26258994700 %>
+  latitude: <%= 37.84101602050 %>
+  neighborhood_id: 2
+
+132:
+  longitude: <%= -122.26250994700 %>
+  latitude: <%= 37.84106501680 %>
+  neighborhood_id: 2
+
+133:
+  longitude: <%= -122.26230594900 %>
+  latitude: <%= 37.84115001550 %>
+  neighborhood_id: 2
+
+134:
+  longitude: <%= -122.26212594800 %>
+  latitude: <%= 37.84124201530 %>
+  neighborhood_id: 2
+
+135:
+  longitude: <%= -122.26196394700 %>
+  latitude: <%= 37.84131001820 %>
+  neighborhood_id: 2
+
+136:
+  longitude: <%= -122.26182795000 %>
+  latitude: <%= 37.84136101660 %>
+  neighborhood_id: 2
+
+137:
+  longitude: <%= -122.26176195000 %>
+  latitude: <%= 37.84138501920 %>
+  neighborhood_id: 2
+
+138:
+  longitude: <%= -122.26174394700 %>
+  latitude: <%= 37.84139601930 %>
+  neighborhood_id: 2
+
+139:
+  longitude: <%= -122.26142594800 %>
+  latitude: <%= 37.84150201790 %>
+  neighborhood_id: 2
+
+140:
+  longitude: <%= -122.26106195000 %>
+  latitude: <%= 37.84161101860 %>
+  neighborhood_id: 2
+
+141:
+  longitude: <%= -122.25987094700 %>
+  latitude: <%= 37.84196701770 %>
+  neighborhood_id: 2
+
+142:
+  longitude: <%= -122.25930094900 %>
+  latitude: <%= 37.84215001820 %>
+  neighborhood_id: 2
+
+143:
+  longitude: <%= -122.25889995000 %>
+  latitude: <%= 37.84226201710 %>
+  neighborhood_id: 2
+
+144:
+  longitude: <%= -122.25835794800 %>
+  latitude: <%= 37.84241301980 %>
+  neighborhood_id: 2
+
+145:
+  longitude: <%= -122.25802895000 %>
+  latitude: <%=  37.84251901700 %>
+  neighborhood_id: 2
+
+146:
+  longitude: <%= -122.25788194700 %>
+  latitude: <%= 37.84256501890 %>
+  neighborhood_id: 2
+
+147:
+  longitude: <%= -122.25773494800 %>
+  latitude: <%= 37.84261201760 %>
+  neighborhood_id: 2
+
+148:
+  longitude: <%= -122.25753394700 %>
+  latitude: <%= 37.84267301830 %>
+  neighborhood_id: 2
+
+149:
+  longitude: <%= -122.25700994900 %>
+  latitude: <%= 37.84284901900 %>
+  neighborhood_id: 2
+
+150:
+  longitude: <%= -122.25685994900 %>
+  latitude: <%= 37.84290001640 %>
+  neighborhood_id: 2
+
+151:
+  longitude: <%= -122.25663995000 %>
+  latitude: <%= 37.84297001720 %>
+  neighborhood_id: 2
+
+152:
+  longitude: <%= -122.25537895000 %>
+  latitude: <%= 37.84336901780 %>
+  neighborhood_id: 2
+
+153:
+  longitude: <%= -122.25466294900 %>
+  latitude: <%= 37.84363801910 %>
+  neighborhood_id: 2
+
+154:
+  longitude: <%= -122.25440994700 %>
+  latitude: <%= 37.84373501720 %>
+  neighborhood_id: 2
+
+155:
+  longitude: <%= -122.25429494700 %>
+  latitude: <%= 37.84376301780 %>
+  neighborhood_id: 2
+
+156:
+  longitude: <%= -122.25281895100 %>
+  latitude: <%= 37.84434301840 %>
+  neighborhood_id: 2
+
+157:
+  longitude: <%= -122.25208795000 %>
+  latitude: <%= 37.84462702030 %>
+  neighborhood_id: 2
+
+158:
+  longitude: <%= -122.25180694900 %>
+  latitude: <%= 37.84474601620 %>
+  neighborhood_id: 2
+
+159:
+  longitude: <%= -122.25178694800 %>
+  latitude: <%= 37.84453401930 %>
+  neighborhood_id: 2
+
+160:
+  longitude: <%= -122.25177494600 %>
+  latitude: <%= 37.84434101610 %>
+  neighborhood_id: 2
+
+161:
+  longitude: <%= -122.25174294700 %>
+  latitude: <%= 37.84401601650 %>
+  neighborhood_id: 2
+
+162:
+  longitude: <%= -122.25167494500 %>
+  latitude: <%= 37.84347901830 %>
+  neighborhood_id: 2
+
+163:
+  longitude: <%= -122.25164794800 %>
+  latitude: <%= 37.84327501550 %>
+  neighborhood_id: 2
+
+164:
+  longitude: <%= -122.25157995000 %>
+  latitude: <%= 37.84255401900 %>
+  neighborhood_id: 2
+
+165:
+  longitude: <%= -122.25156694500 %>
+  latitude: <%= 37.84237301610 %>
+  neighborhood_id: 2
+
+166:
+  longitude: <%= -122.25149595000 %>
+  latitude: <%= 37.84173501810 %>
+  neighborhood_id: 2
+
+167:
+  longitude: <%= -122.25140894600 %>
+  latitude: <%= 37.84093201850 %>
+  neighborhood_id: 2
+
+168:
+  longitude: <%= -122.25136395000 %>
+  latitude: <%= 37.84036601660 %>
+  neighborhood_id: 2
+
+169:
+  longitude: <%= -122.25135695000 %>
+  latitude: <%= 37.84006701640 %>
+  neighborhood_id: 2
+
+170:
+  longitude: <%= -122.25120194800 %>
+  latitude: <%= 37.83621501570 %>
+  neighborhood_id: 2
+
+171:
+  longitude: <%= -122.25157195100 %>
+  latitude: <%= 37.83562201730 %>
+  neighborhood_id: 2
+
+172:
+  longitude: <%= -122.25167094600 %>
+  latitude: <%= 37.83568501750 %>
+  neighborhood_id: 2
+
+173:
+  longitude: <%= -122.25223995200 %>
+  latitude: <%= 37.83477301980 %>
+  neighborhood_id: 2
+
+174:
+  longitude: <%= -122.25230094600 %>
+  latitude: <%= 37.83476101600 %>
+  neighborhood_id: 2
+
+175:
+  longitude: <%= -122.25237320100 %>
+  latitude: <%= 37.83475499650 %>
+  neighborhood_id: 2
+
+176:
+  longitude: <%= -122.25239694800 %>
+  latitude: <%= 37.83475302020 %>
+  neighborhood_id: 2
+
+177:
+  longitude: <%= -122.25251894700 %>
+  latitude: <%= 37.83476901750 %>
+  neighborhood_id: 2
+
+178:
+  longitude: <%= -122.25264594900 %>
+  latitude: <%= 37.83479301640 %>
+  neighborhood_id: 2
+
+179:
+  longitude: <%= -122.25286194900 %>
+  latitude: <%= 37.83486401890 %>
+  neighborhood_id: 2
+
+180:
+  longitude: <%= -122.25315894800 %>
+  latitude: <%= 37.83501601620 %>
+  neighborhood_id: 2
+
+181:
+  longitude: <%= -122.25343895000 %>
+  latitude: <%= 37.83512601760 %>
+  neighborhood_id: 2
+
+182:
+  longitude: <%= -122.25424595100 %>
+  latitude: <%= 37.83543101650 %>
+  neighborhood_id: 2
+
+183:
+  longitude: <%= -122.25507994600 %>
+  latitude: <%= 37.83576701720 %>
+  neighborhood_id: 2
+
+184:
+  longitude: <%= -122.25538495100 %>
+  latitude: <%= 37.83588301630 %>
+  neighborhood_id: 2
+
+185:
+  longitude: <%= -122.25562694600 %>
+  latitude: <%= 37.83597101760 %>
+  neighborhood_id: 2
+
+186:
+  longitude: <%= -122.25650594800 %>
+  latitude: <%= 37.83633301670 %>
+  neighborhood_id: 2
+
+187:
+  longitude: <%= -122.25688695000 %>
+  latitude: <%= 37.83646001870 %>
+  neighborhood_id: 2
+
+188:
+  longitude: <%= -122.25729095000 %>
+  latitude: <%= 37.83656901520 %>
+  neighborhood_id: 2
+
+189:
+  longitude: <%= -122.25770094700 %>
+  latitude: <%= 37.83663101780 %>
+  neighborhood_id: 2
+
+190:
+  longitude: <%= -122.25825294900 %>
+  latitude: <%= 37.83671201950 %>
+  neighborhood_id: 2
+
+191:
+  longitude: <%= -122.25948395100 %>
+  latitude: <%= 37.83690001750 %>
+  neighborhood_id: 2
+
+192:
+  longitude: <%= -122.25996294900 %>
+  latitude: <%= 37.83698202160 %>
+  neighborhood_id: 2
+
+193:
+  longitude: <%= -122.26051895000 %>
+  latitude: <%= 37.83706801910 %>
+  neighborhood_id: 2
+
+194:
+  longitude: <%= -122.26087894900 %>
+  latitude: <%= 37.83711101920 %>
+  neighborhood_id: 2
+
+195:
+  longitude: <%= -122.26132394900 %>
+  latitude: <%= 37.83715601890 %>
+  neighborhood_id: 2
+
+196:
+  longitude: <%= -122.26182094700 %>
+  latitude: <%= 37.83722201720 %>
+  neighborhood_id: 2
+
+197:
+  longitude: <%= -122.26194894800 %>
+  latitude: <%= 37.83723801980 %>
+  neighborhood_id: 2
+
+198:
+  longitude: <%= -122.26228194900 %>
+  latitude: <%= 37.83730801730 %>
+  neighborhood_id: 2
+
+199:
+  longitude: <%= -122.26226194800 %>
+  latitude: <%= 37.83764502080 %>
+  neighborhood_id: 2
+
+200:
+  longitude: <%= -122.26220594800 %>
+  latitude: <%= 37.83799502010 %>
+  neighborhood_id: 2
+
+201:
+  longitude: <%= -122.26233294700 %>
+  latitude: <%= 37.83797501850 %>
+  neighborhood_id: 2
+
+202:
+  longitude: <%= -122.26291894600 %>
+  latitude: <%= 37.83791301710 %>
+  neighborhood_id: 2
+
+203:
+  longitude: <%= -122.26302994600 %>
+  latitude: <%= 37.83791001770 %>
+  neighborhood_id: 2
+
+204:
+  longitude: <%= -122.26330394700 %>
+  latitude: <%= 37.83789701750 %>
+  neighborhood_id: 2
+
+205:
+  longitude: <%= -122.26335094900 %>
+  latitude: <%= 37.83789701750 %>
+  neighborhood_id: 2
+
+206:
+  longitude: <%= -122.26340794800 %>
+  latitude: <%= 37.83789701750 %>
+  neighborhood_id: 2
+
+207:
+  longitude: <%= -122.26347495100 %>
+  latitude: <%= 37.83789301840 %>
+  neighborhood_id: 2
+
+208:
+  longitude: <%= -122.26367294700 %>
+  latitude: <%= 37.83792401760 %>
+  neighborhood_id: 2
+
+209:
+  longitude: <%= -122.26384294800 %>
+  latitude: <%= 37.83793701780 %>
+  neighborhood_id: 2
+
+210:
+  longitude: <%= -122.26398595200 %>
+  latitude: <%= 37.83793201590 %>
+  neighborhood_id: 2
+
+211:
+  longitude: <%= -122.26410494700 %>
+  latitude: <%= 37.83790601850 %>
+  neighborhood_id: 2
+
+212:
+  longitude: <%= -122.26421695000 %>
+  latitude: <%= 37.83786001950 %>
+  neighborhood_id: 2
+
+213:
+  longitude: <%= -122.26446495000 %>
+  latitude: <%= 37.83783601580 %>
+  neighborhood_id: 2
+
+214:
+  longitude: <%= -122.26467694600 %>
+  latitude: <%= 37.83779901780 %>
+  neighborhood_id: 2
+
+215:
+  longitude: <%= -122.26495694900 %>
+  latitude: <%= 37.83775001930 %>
+  neighborhood_id: 2
+
+216:
+  longitude: <%= -122.26518594600 %>
+  latitude: <%= 37.83772801520 %>
+  neighborhood_id: 2
+
+217:
+  longitude: <%= -122.26538395000 %>
+  latitude: <%= 37.83770901910 %>
+  neighborhood_id: 2
+
+218:
+  longitude: <%= -122.26559094800 %>
+  latitude: <%= 37.83767602020 %>
+  neighborhood_id: 2dcr

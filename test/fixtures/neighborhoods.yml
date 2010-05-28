@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+1:
+  name: Rockridge
+  city: Oakland
+  county: Alameda
+
+2:
+  name: Shafter
+  city: Oakland
+  county: Alameda
