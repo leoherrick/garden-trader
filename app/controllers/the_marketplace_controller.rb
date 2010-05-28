@@ -1,0 +1,2 @@
+class TheMarketplaceController < ApplicationController
+end
