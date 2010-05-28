@@ -284,3 +284,10 @@ margin-left:40px;
 #mainImage.garden{
 	background-image: url("/images/garden.png	");
 }
+
+#mapbar .util {
+	color:gray;
+	float:right;
+	font-size:.8em;
+	padding:1px 3px;
+}

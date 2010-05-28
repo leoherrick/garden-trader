@@ -6,7 +6,6 @@ class MyNeighborhoodController < ActionController::Base
 
   def index
     @title = 'My Neighborhood'  
-    @address = User.find_by_email("leoherrick@gmail.com").address
   end
   
 end

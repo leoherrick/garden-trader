@@ -17,15 +17,15 @@
   
 
 [
-  {:email => "leoherrick@gmail.com", :password => "test12", :username => "Leo Herrick"},
-  {:email => "test1@test.com", :password => "test12", :username => "The Hendersons"},
-  {:email => "test2@test.com", :password => "test12", :username => "The Johnson Family"},
-  {:email => "test3@test.com", :password => "test12", :username => "Rick Agee"},
-  {:email => "test4@test.com", :password => "test12", :username => "The O'Leerys"},
-  {:email => "test5@test.com", :password => "test12", :username => "Mary Hampton"},
-  {:email => "test6@test.com", :password => "test12", :username => "The Lassens"}
+  {:email => "leoherrick@gmail.com", :password => "test12"},
+  {:email => "test1@test.com", :password => "test12"},
+  {:email => "test2@test.com", :password => "test12"},
+  {:email => "test3@test.com", :password => "test12"},
+  {:email => "test4@test.com", :password => "test12"},
+  {:email => "test5@test.com", :password => "test12"},
+  {:email => "test6@test.com", :password => "test12"}
     ].each do |user|
-     User.find_or_create_by_email(user) 
+      User.create(user)
 end    
     
   User.find_by_email("leoherrick@gmail.com").create_address(
@@ -39,6 +39,7 @@ end
     :planted_date => "1/1/10",
     :quantity => "12 bushels"
   )
+  User.find_by_email("leoherrick@gmail.com").update_attribute(:username, "Leo Herrick")
    
   User.find_by_email("test1@test.com").create_address(
     :state => "CA",
@@ -46,36 +47,47 @@ end
     :zip => "94618",
     :street_address => "5400 Lawton Ave."
   )  
+  User.find_by_email("test1@test.com").update_attribute(:username, "The Hendersons")
+  
   User.find_by_email("test2@test.com").create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5300 College Ave."
   )  
+  User.find_by_email("test2@test.com").update_attribute(:username, "The O'Leerys")
+  
   User.find_by_email("test3@test.com").create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5700 College Ave."
   )  
+  User.find_by_email("test3@test.com").update_attribute(:username, "Mary Hampton")
+
   User.find_by_email("test4@test.com").create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5320 Lawton Ave."
   )  
+  User.find_by_email("test4@test.com").update_attribute(:username, "The Johnsons")
+
   User.find_by_email("test5@test.com").create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5425 Clifton Ave."
   )  
+  User.find_by_email("test5@test.com").update_attribute(:username, "Rick Agee")
+
   User.find_by_email("test6@test.com").create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5800 Ocean View Dr."
   )  
+  User.find_by_email("test6@test.com").update_attribute(:username, "Rick Agee")
 
 ## crop categories
 ["Apples",

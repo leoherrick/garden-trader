@@ -72,19 +72,37 @@
 					  icon:imageURL,
 					  title:"User: "+userID,
 		          });
+
 				// on mouseclick, show infowindo for neighborhood
-				var infowindow = new google.maps.InfoWindow({
-				    content: 'User: '+userID
-				});
-				google.maps.event.addListener(marker, 'click', function(){
-					for (var key in GT.openInfowindows) {
-					   var obj = GT.openInfowindows[key];
-					   obj.close();
-					}
-					
-					infowindow.open(map,marker);
-					GT.openInfowindows[userID] = infowindow;
-				})
+					google.maps.event.addListener(marker, 'click', function(){
+						for (var key in GT.openInfowindows) {
+						   var obj = GT.openInfowindows[key];
+						   obj.close();
+						}
+						$.ajax({
+						   type: "GET",
+						   url: "/users/"+userID+".js",
+						   dataType: "json",
+							success: function(msg){
+								var infowindow = new google.maps.InfoWindow({
+									maxWidth: "500px",
+								    content: 	'<div id="content" style="height:75px;width:200px">'+
+									    '<div id="siteNotice">'+
+									    '</div>'+
+									    '<h1 id="firstHeading" class="firstHeading">' + msg.username + '</h1>'+
+									    '<div id="bodyContent">'+
+								 		"<p><b>Address:</b> " + msg.address.street_address + "</p>"+
+									    '</div>'+
+									    '</div>'
+								});
+								infowindow.open(map,marker);
+								GT.openInfowindows[userID] = infowindow;
+						   }
+						 });
+					})
+				
+				
+				
 		        } else {
 		          // alert("Geocode was not successful for the following reason: " + status);
 		        }
@@ -101,6 +119,16 @@
 	// add test point
 
 }
+
+
+// hide and reveal neighborhoods 
+var togleNeighborhoods = function () {
+}
+
+$('#mapbar .util').click(togleNeighborhoods);
+
+
+
 var togglePanel = function () {
 	$('#panel').animate({width:'toggle'},300)
 	$('#panelbar').animate({width:'toggle'},300)
