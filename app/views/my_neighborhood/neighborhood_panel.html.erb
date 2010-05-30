@@ -1,0 +1,9 @@
+<div><img src="images/neighborhood.png" style="float:right; width:100px"/>
+<h1><%= @neighborhood.name %></h1>
+</div>
+<br style="clear:both;"/>
+Gardeners: <%= @neighborhood.users.length %><br/>
+<ul>
+<% @neighborhood.users.collect{|x| x.username}.each do |gardener| %>
+<li><%= gardener %></li>
+<% end %></ul>

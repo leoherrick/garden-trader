@@ -15,157 +15,92 @@
   puts "cleared all crops"
   
   
-
-[
-  {:email => "leoherrick@gmail.com", :password => "test12"},
-  {:email => "test1@test.com", :password => "test12"},
-  {:email => "test2@test.com", :password => "test12"},
-  {:email => "test3@test.com", :password => "test12"},
-  {:email => "test4@test.com", :password => "test12"},
-  {:email => "test5@test.com", :password => "test12"},
-  {:email => "test6@test.com", :password => "test12"}
-    ].each do |user|
-      User.create(user)
-end    
+@user1 = User.create(:email => "leoherrick@gmail.com", :password => "test12", :username => "Leo Herrick")
+@user2 = User.create(:email => "test1@test.com", :password => "test12")
+@user3 = User.create(:email => "test2@test.com", :password => "test12")
+@user4 = User.create(:email => "test3@test.com", :password => "test12")
+@user5 = User.create(:email => "test4@test.com", :password => "test12")
+@user6 = User.create(:email => "test5@test.com", :password => "test12")
+@user7 = User.create(:email => "test6@test.com", :password => "test12")
+   
     
-  User.find_by_email("leoherrick@gmail.com").create_address(
+  @user1.create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5425 College Ave."
   )
-  User.find_by_email("leoherrick@gmail.com").crops.create(
-    :food_type_id => 1,
+  @user1.crops.create(
+    :food_type_id => FoodType.find_by_name("Apples").id,
     :planted_date => "1/1/10",
-    :quantity => "12 bushels"
+    :quantity => "12 Bags"
   )
-  User.find_by_email("leoherrick@gmail.com").update_attribute(:username, "Leo Herrick")
+  @user1.update_attribute(:username, "Leo Herrick")
+  @user1.update_attribute(:neighborhood, Neighborhood.find_by_name("Shafter") )
+  puts "added " + @user1.username
    
-  User.find_by_email("test1@test.com").create_address(
+  @user2.create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5400 Lawton Ave."
   )  
-  User.find_by_email("test1@test.com").update_attribute(:username, "The Hendersons")
+  @user2.update_attribute(:username, "The Hendersons")
+  @user2.update_attribute(:neighborhood, Neighborhood.find_by_name("Shafter") )
+  puts "added " + @user2.username
   
-  User.find_by_email("test2@test.com").create_address(
+  @user3.create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5300 College Ave."
   )  
-  User.find_by_email("test2@test.com").update_attribute(:username, "The O'Leerys")
+  @user3.update_attribute(:username, "The O'Leerys")
+  @user3.update_attribute(:neighborhood, Neighborhood.find_by_name("Rockridge") )
+  puts "added " + @user3.username
   
-  User.find_by_email("test3@test.com").create_address(
+  @user4.create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5700 College Ave."
   )  
-  User.find_by_email("test3@test.com").update_attribute(:username, "Mary Hampton")
+  @user4.update_attribute(:username, "Mary Hampton")
+  @user4.update_attribute(:neighborhood, Neighborhood.find_by_name("Rockridge") )
+  puts "added " + @user4.username
+  
 
-  User.find_by_email("test4@test.com").create_address(
+  @user5.create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5320 Lawton Ave."
   )  
-  User.find_by_email("test4@test.com").update_attribute(:username, "The Johnsons")
+  @user5.update_attribute(:username, "The Johnsons")
+  @user5.update_attribute(:neighborhood, Neighborhood.find_by_name("Shafter") )
+  puts "added " + @user5.username
+  
+  
 
-  User.find_by_email("test5@test.com").create_address(
+  @user6.create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5425 Clifton Ave."
   )  
-  User.find_by_email("test5@test.com").update_attribute(:username, "Rick Agee")
+  @user6.update_attribute(:username, "Rick Smith")
+  @user6.update_attribute(:neighborhood, Neighborhood.find_by_name("Shafter") )
+  puts "added " + @user6.username
 
-  User.find_by_email("test6@test.com").create_address(
+  @user7.create_address(
     :state => "CA",
     :city => "Oakland",
     :zip => "94618",
     :street_address => "5800 Ocean View Dr."
   )  
-  User.find_by_email("test6@test.com").update_attribute(:username, "Tom and Benji")
+  @user7.update_attribute(:username, "Tom and Benji")
+  @user7.update_attribute(:neighborhood, Neighborhood.find_by_name("Rockridge") )
+  puts "added " + @user7.username
 
-## crop categories
-["Apples",
-  "Apricots",
-  "Artichokes",
-  "Asparagus",
-  "Avocados",
-  "Basil", 
-  "Beans",
-  "Beets",
-  "Blackberrys",
-  "Blueberrys",
-  "Broccoli",
-  "Brussels sprouts",
-  "Cabbage",
-  "Carrots",
-  "Cauliflower",
-  "Celeriac",
-  "Celery",
-  "Chard",
-  "Cherries",
-  "Chicory",
-  "Chives",
-  "Collards",
-  "Corn",
-  "Cranberrys",
-  "Cress",
-  "Cucumbers",
-  "Dill",
-  "Fennel",
-  "Figs",
-  "Gourds",
-  "Grapefruit",
-  "Grapes",
-  "Kale",
-  "Kohlrabi",
-  "Lavender",
-  "Leek",
-  "Lemons",
-  "Lettuce",
-  "Mandarin",
-  "Marjoram",
-  "Melons",
-  "Mint",
-  "Mushrooms",
-  "Nectarine",
-  "Onions",
-  "Oranges",
-  "Oregano",
-  "Parsley",
-  "Parsnips",
-  "Peaches",
-  "Pears",
-  "Peas",
-  "Peppers",
-  "Plums",
-  "Potatoes",
-  "Pumpkins",
-  "Radicchio",
-  "Radishes",
-  "Rhubarb",
-  "Rosemary",
-  "Rutabaga",
-  "Sage",
-  "Shallots",
-  "Spinach",
-  "Squash",
-  "Strawberrys",
-  "Swede",
-  "Sweetcorn",
-  "Sweet Potatoes",
-  "Tarragon",
-  "Thyme",
-  "Tomatoes",
-  "Turnips",
-  "Watercress",
-  "Watermelon",
-  "Yams"].each do |food|
-    FoodType.find_or_create_by_name food
-  end
+
 

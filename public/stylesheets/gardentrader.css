@@ -29,6 +29,11 @@ h2,h3 {
 font-size:1.1em;
 }
 
+p {
+	margin:0;
+	padding:0;
+}
+
 #subHeader {
 font-weight:800;
 color:#ffde00;
@@ -68,7 +73,7 @@ padding:.35em 1em;
 -webkit-border-radius:5px;
 border-radius:5px;
 position:relative;
-background-color:#bbe4bc;
+background-color:#8dcf8d;
 height:100%;
 margin:0 12px 12px;
 padding:12px 12px 12px;
@@ -179,7 +184,7 @@ max-width:10px;
 }
 
 #navbar a.active {
-background-color:#bbe4bc;
+background-color:#8dcf8d;
 }
 
 #utilBar a.active {
@@ -211,6 +216,10 @@ left:815px;
 margin-bottom:.75em;
 }
 
+#content > div.bd {
+	padding:15px;
+}
+
 #content > div.bd h2 {
 margin:20px 0 10px;
 }
@@ -219,10 +228,27 @@ margin:20px 0 10px;
 margin-left:40px;
 }
 
-.notice {
-	padding:4px;
+#notice {
+	padding:10px;
+	-moz-box-shadow:4px 4px 10px #666;
+	-webkit-box-shadow:4px 4px 10px #666;
+	box-shadow:4px 4px 10px #666;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	filter:alpha(opacity=90);
+	-moz-opacity:0.9;
+	-khtml-opacity: 0.9;
+	opacity: 0.9;	
+	z-index:1002;
+	position:absolute;
+	top:30px;
+	right:10px;
+	padding:14px;
 	background:pink;
 	border:1px solid red;
+	min-width:250px;
+	min-height:75px;
 }
 
 #topbar {

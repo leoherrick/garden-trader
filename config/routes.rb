@@ -1,4 +1,8 @@
 GardenTrader::Application.routes.draw do |map|
+ 
+  resources :profiles
+
+
   devise_for :users
 
   # The priority is based upon order of creation:
@@ -7,6 +11,8 @@ GardenTrader::Application.routes.draw do |map|
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
+  match "my_neighborhood/user_panel/:user_id" => "my_neighborhood#user_panel"
+  match "my_neighborhood/neighborhood_panel/:neighborhood_id" => "my_neighborhood#neighborhood_panel"
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
@@ -49,7 +55,7 @@ GardenTrader::Application.routes.draw do |map|
   #     resources :products
   #   end
 
-
+  match 'my_profile' => 'my_profile#index'
   match 'my_mail' => 'my_mail#index'
   match 'my_garden' => 'my_garden#index'
   match 'my_neighborhood' => 'my_neighborhood#index'
@@ -60,7 +66,7 @@ GardenTrader::Application.routes.draw do |map|
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   # root :to => "welcome#index"
-  root :to => "application#home"
+  root :to => "garden_trader#index"
 
   # See how all your routes lay out with "rake routes"
 

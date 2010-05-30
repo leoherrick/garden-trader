@@ -11,4 +11,6 @@ class NeighborhoodTest < ActiveSupport::TestCase
     assert ( @shafter.contains_point?({:latitude => 37.840566, :longitude => -122.252469}) )
   end
   
+  
+  
 end

@@ -2,13 +2,13 @@
    "http://www.w3.org/TR/html4/strict.dtd">
 <HTML>
   <HEAD>
-    <TITLE>GardenTrader</TITLE>
+    <TITLE>Garden Trader</TITLE>
 	<%= stylesheet_link_tag :all %>
 	<script>
 	var GT = {
 		user: {},
 		hoods: {},
-		openInfowindows: {}
+		openInfowindows: {}	
 	};
 	<% if current_user %>
 	<% @address = current_user.address %>
@@ -31,7 +31,7 @@
   <BODY onunload="GUnload()">
     <div id="frame">
       <div class="hd">
-        <h1>GardenTrader</h1>
+        <h1>Garden Trader</h1>
         <p id="subHeader">What Are You Growing? <span id="subSubheader">What Are Your Neighbors Growing?</span></p>
 		<div id="user_nav">
 			<% if user_signed_in? %>
@@ -46,12 +46,13 @@
       <div class="bd">
       <div id="navbar">
         <ul>
-          <li><a <%= active_tab?('my_mail') %> href="my_mail">My<br />Mail</a></li>
-          <li><a <%= active_tab?('my_garden') %> href="my_garden">My<br/>Garden</a></li>
-          <li><a <%= active_tab?('my_neighborhood') %> href="my_neighborhood">My<br/>Neighborhood</a></li>
-          <li><a <%= active_tab?('the_marketplace') %> href="the_marketplace">The<br />Marketplace</a></li>
-          <li><a <%= active_tab?('the_community') %> href="the_community">The<br/>Community</a></li>
-          <li><a <%= active_tab?('garden_trader') %> href="garden_trader">Garden<br />Trader</a></li>
+		  <li><%= link_to raw('My<br />Profile'), my_profile_url, html_options = {:class => active_tab?('my_profile')} %></li>
+		  <li><%= link_to raw('My<br />Garden'), my_garden_url, html_options = {:class => active_tab?('my_garden')} %></li>
+          <li><%= link_to raw('My<br />Neighborhood'), my_neighborhood_url, html_options = {:class => active_tab?('my_neighborhood')} %></li>
+		  <li><%= link_to raw('My<br />Mail'), my_mail_url, html_options = {:class => active_tab?('my_mail')} %></li>
+          <li><%= link_to raw('The<br />Marketplace'), the_marketplace_url, html_options = {:class => active_tab?('the_marketplace')} %></li>
+          <li><%= link_to raw('The<br />Community'), the_community_url, html_options = {:class => active_tab?('the_community')} %></li>
+          <li><%= link_to raw('Garden<br />Trader'), garden_trader_url, html_options = {:class => active_tab?('garden_trader')} %></li>
         </ul>
       </div>
         <div id="mat">
@@ -63,9 +64,6 @@
             <div id="content">
               <div class="hd"><h2><%= params[:controller].humanize.titleize %></h2></div>
               <div class="bd">
-				<% if flash[:notice] %>
-			    	<div class="notice"><%= flash[:notice] %></div>
-			    <% end %>
               	<%= yield %>
               </div>
               <div class="ft">
@@ -77,6 +75,14 @@
       </div>
       <div class="ft"></div>
     </div>
-        
+    <% if flash[:notice] %>
+		<script type="text/javascript" charset="utf-8">
+			$(document).ready(function(){
+				$('#notice').hide().fadeIn(400).delay(2000).fadeOut(400).destroy()				
+			})
+		</script>
+    	<div id="notice"><%= flash[:notice] %></div>
+    <% end %>
+	
 </BODY>
 </HTML>

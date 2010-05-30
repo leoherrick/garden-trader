@@ -6,7 +6,9 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation
-  has_many :crops
+  has_many :crops, :dependent => :destroy
   has_one :address, :dependent => :destroy
+  belongs_to :neighborhood
   validates_associated :address
+  
 end

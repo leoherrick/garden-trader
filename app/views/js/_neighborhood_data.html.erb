@@ -1,3 +1,8 @@
+<style type="text/css" media="screen">
+#content > div.bd {
+	padding:0px;
+}	
+</style>
 <script type="text/javascript" charset="utf-8">
 	function initialize() {
 	
@@ -25,6 +30,7 @@
 	
 	// set up hoods
 	// declare which hoods to map
+	// Neighborhood.find(:all, :conditions => {:city => 'Oakland'}).collect{|x| x.name}.each do |hood| 
 	<% ["Rockridge","Shafter","Temescal"].each do |hood| %>
 		
 		// build points for one set of the hoods
@@ -55,18 +61,21 @@
 		})
 		
 		google.maps.event.addListener(GT.hoods["<%=hood%>"], 'click', function(){
+			for (var key in GT.openInfowindows) {
+			   var obj = GT.openInfowindows[key];
+			   obj.close();
+			}
 			$.ajax({
 				type: "GET",
-				url: "/neighborhood/"+<%= @neighborhood = Neighborhood.find_by_name(hood).id %>+".js",
-				dataType: "json",
-				success: function(msg){
-					$('#mapDetail').html('<h1>'+msg.name+'</h1>')
-					for (var key in GT.openInfowindows) {
-					   var obj = GT.openInfowindows[key];
-					   obj.close();
-					}
-				}
-			})
+				url: "/my_neighborhood/neighborhood_panel/"+<%= Neighborhood.find_by_name(hood).id %>,
+				dataType: "html",
+					beforeSend: function(){
+						$('#panelContent').fadeOut('fast')
+					},
+					success: function(html){
+						$('#panelContent').html(html).fadeIn('fast')
+			   		}
+			});
 		})
 
 	<% end %>
@@ -79,6 +88,7 @@
 		var homeImage = 'http://google-maps-icons.googlecode.com/files/home.png'
 		var marketImage = 'http://google-maps-icons.googlecode.com/files/convenience.png'
 		var mapLocation = function (street, city, state, imageURL, userID) {
+			GT.locators = {};
 		    if (geocoder) {
 		      geocoder.geocode( { 'address': street+', '+city+', '+state}, function(results, status) {
 		        if (status == google.maps.GeocoderStatus.OK) {
@@ -88,33 +98,30 @@
 					  icon:imageURL,
 					  title:"User: "+userID,
 		          });
+				  GT.locators[userID] = marker;
 
 				// on mouseclick, show infowindo for user
 					google.maps.event.addListener(marker, 'click', function(){
-						for (var key in GT.openInfowindows) {
-						   var obj = GT.openInfowindows[key];
-						   obj.close();
+						for (var key in GT.locators) {
+						   var obj = GT.locators[key];
+						   obj.setShadow();
 						}
+						marker.setShadow('images/highlight.png')
 						$.ajax({
-						   type: "GET",
-						   url: "/users/"+userID+".js",
-						   dataType: "json",
-							success: function(msg){
-								var infowindow = new google.maps.InfoWindow({
-									maxWidth: "500px",
-								    content: 	'<div id="content" style="height:75px;width:200px">'+
-									    '<h1 id="firstHeading" class="firstHeading">' + msg.username + '</h1>'+
-									    '<div id="bodyContent" style="font-size:.8em">'+
-								 		"<p><b>Address:</b> " + msg.address.street_address + "</p>"+
-									    '</div>'+
-									    '</div>'
-								});
-								infowindow.open(map,marker);
-								GT.openInfowindows[userID] = infowindow;
-								$('#mapDetail').html('<h1>'+msg.username+'</h1>')
-								
-						   }
-						 });
+							type: "GET",
+							url: "/my_neighborhood/user_panel/"+userID,
+							dataType: "html",
+								beforeSend: function(){
+									$('#panelContent').append('<img id="loader" src="images/ajax-loader.gif" />')
+									$('#panelContent').fadeOut('fast')
+								},
+								complete: function(){
+									$('img#loader').remove();
+								},
+								success: function(html){
+									$('#panelContent').html(html).fadeIn('fast');	
+						   		}
+						});
 					})
 				
 				
@@ -125,11 +132,14 @@
 		      });
 		    }
 		}
-		<% User.find(:all, :offset => 1, :limit => 10).each do |user| %>
+		<% if current_user == true %>
+		<% else %>
+		<% current_user = User.find_by_email("leoherrick@gmail.com") %>
+		<% end %>
+		<% User.all.reject{|x| x === current_user }.each do |user| %>
 			mapLocation("<%= user.address.street_address%>", "<%= user.address.city%>", "<%= user.address.state %>", neighborImage, "<%=user.id%>");
 		<% end %>
-		<% user = User.find(:first) %>
-			mapLocation("<%= user.address.street_address%>", "<%= user.address.city%>", "<%= user.address.state %>", homeImage, "<%=user.id%>");	
+		mapLocation("<%= current_user.address.street_address%>", "<%= current_user.address.city%>", "<%= current_user.address.state %>", homeImage, "<%=current_user.id%>");	
 
 	
 	// add test point

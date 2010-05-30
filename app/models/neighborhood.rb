@@ -1,5 +1,6 @@
 class Neighborhood < ActiveRecord::Base
   has_many :polygon_points
+  has_many :users
   
   
   def contains_point?(point)

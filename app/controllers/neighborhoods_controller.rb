@@ -3,7 +3,6 @@ class NeighborhoodsController < ActionController::Base
   
   def show
     @neighborhood = Neighborhood.find(params[:id])
-
     render :json => @neighborhood.to_json
   end
 end
