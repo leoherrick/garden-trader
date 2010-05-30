@@ -4,6 +4,7 @@
 }	
 </style>
 <script type="text/javascript" charset="utf-8">
+	GT.panelOpen = true
 	function initialize() {
 	
 	// set up default map options
@@ -65,6 +66,9 @@
 			   var obj = GT.locators[key];
 			   obj.setShadow();
 			}
+			if (!GT.panelOpen){
+				togglePanel();
+			}
 			$.ajax({
 				type: "GET",
 				url: "/my_neighborhood/neighborhood_panel/"+<%= Neighborhood.find_by_name(hood).id %>,
@@ -100,11 +104,14 @@
 		          });
 				  GT.locators[userID] = marker;
 
-				// on mouseclick, show infowindo for user
+				// on mouseclick, show details for user
 					google.maps.event.addListener(marker, 'click', function(){
 						for (var key in GT.locators) {
 						   var obj = GT.locators[key];
 						   obj.setShadow();
+						}
+						if (!GT.panelOpen){
+							togglePanel();
 						}
 						marker.setShadow('images/highlight.png')
 						$.ajax({
@@ -112,7 +119,7 @@
 							url: "/my_neighborhood/user_panel/"+userID,
 							dataType: "html",
 								beforeSend: function(){
-									$('#panelContent').append('<img id="loader" src="images/ajax-loader.gif" />')
+									$('#panel').append('<img id="loader" src="images/ajax-loader.gif" />')
 									$('#panelContent').fadeOut('fast')
 								},
 								complete: function(){
@@ -120,7 +127,11 @@
 								},
 								success: function(html){
 									$('#panelContent').html(html).fadeIn('fast');	
-						   		}
+						   		},
+								error: function(){
+									$('#panelContent').html("could not load data").fadeIn('fast');	
+								},
+						
 						});
 					})
 				
@@ -158,6 +169,7 @@ $('#mapbar .util').click(togleNeighborhoods);
 var togglePanel = function () {
 	$('#panel').animate({width:'toggle'},300)
 	$('#panelbar').animate({width:'toggle'},300)
+	GT.panelOpen = !GT.panelOpen;
 }
 $('#open, #close').click(togglePanel)
 
