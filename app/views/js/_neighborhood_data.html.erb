@@ -74,11 +74,19 @@
 				url: "/my_neighborhood/neighborhood_panel/"+<%= Neighborhood.find_by_name(hood).id %>,
 				dataType: "html",
 					beforeSend: function(){
+						$('#panel').append('<img id="loader" src="images/ajax-loader.gif" />')
 						$('#panelContent').fadeOut('fast')
 					},
+					complete: function(){
+						$('img#loader').remove();
+					},
 					success: function(html){
-						$('#panelContent').html(html).fadeIn('fast')
-			   		}
+						$('#panelContent').html(html).fadeIn('fast');	
+			   		},
+					error: function(){
+						$('#panelContent').html("could not load data").fadeIn('fast');	
+					},
+			
 			});
 		})
 
@@ -130,8 +138,7 @@
 						   		},
 								error: function(){
 									$('#panelContent').html("could not load data").fadeIn('fast');	
-								},
-						
+								}
 						});
 					})
 				
