@@ -46,7 +46,7 @@ color:#FFF;
 
 #frame {
 width:100%;
-min-width:785px;
+min-width:990px;
 background:#50a158;
 z-index:200;
 }
@@ -115,7 +115,7 @@ width:100%;
 -moz-border-radius:5px;
 -webkit-border-radius:5px;
 border-radius:5px;
-background-color:#FFF;
+background-color:#e8ecf9;
 }
 
 #content > div.hd {
@@ -132,8 +132,10 @@ height:20px;
 }
 
 #content > div.bd {
+padding:0;
 line-height:1.5em;
 min-height:450px;
+min-width:943px;
 }
 
 #content > div.ft {
@@ -216,10 +218,6 @@ left:815px;
 margin-bottom:.75em;
 }
 
-#content > div.bd {
-	padding:15px;
-}
-
 #content > div.bd h2 {
 margin:20px 0 10px;
 }
@@ -270,7 +268,7 @@ margin-left:40px;
 	position:absolute;
 	width:100%;
 	height:25px;
-	min-width:738px;
+	min-width:943px;
 }
 
 #panel {
@@ -299,7 +297,7 @@ margin-left:40px;
 }
 
 #map_canvas {
-	min-width:738px;
+	min-width:943px;
 	min-height:425px;
 }
 
@@ -321,4 +319,85 @@ margin-left:40px;
 	position:absolute;
 	top:100px;
 	left:45%;
+}
+#standardSize {
+	margin:0;
+	width:923px;
+	margin:0px auto;
+	padding:20px 10px;
+}
+.offsetImage{
+	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-moz-box-shadow:2px 2px 4px #666;
+	-webkit-box-shadow:2px 2px 4px #464646;
+	box-shadow:3px 3px 7px #666;
+}
+.smallShadow {
+		-moz-box-shadow:1px 1px 2px #666;
+		-webkit-box-shadow:1px 1px 2px #464646;
+		box-shadow:3px 3px 7px #666;
+}
+
+.tile {
+	font-size:.8em;
+}
+.tile > h3 {
+	font-size:.9em;
+}
+.smallIcon{
+	width:30px;
+	height:30px;
+	margin-bottom:-10px;
+	margin-right:4px;
+}
+.smallFollowerIcon {
+	width:30px;
+	margin:1px 2px;
+}
+.avatarSmall{
+	clear:both;
+	float:left;
+	margin-right:5px;
+}
+.clear {
+	padding:0;
+	margin:0;
+}
+.comment {
+	line-height:1.8em;
+}
+#updateAvatar {
+	margin:0px;
+	display:none;
+	position:absolute;
+	top:2px;
+	left:2px;
+	border:1px solid gray;
+	height:20px;
+	background-color:white;
+	padding:3px;
+}
+#avatar {
+	width:180px;
+	height:auto;
+	margin:10px 0px;
+}
+.badge {
+	height:40px;
+	width:40px;
+}
+.dateMonth {
+	color:white;
+	font-size:5pt;
+	top:0px;
+	left:1px;
+	position:absolute;
+	z-index:100;
+}
+.dateNumber {
+	top:9px;
+	left:7px;
+	position:absolute;
+	z-index:100;
 }

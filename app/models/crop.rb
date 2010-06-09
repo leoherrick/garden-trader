@@ -1,4 +1,4 @@
 class Crop < ActiveRecord::Base
   belongs_to :user
-  has_one :food_type
+  belongs_to :food_type
 end

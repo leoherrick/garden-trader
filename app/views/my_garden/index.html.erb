@@ -1,0 +1,13 @@
+<script type="text/javascript" charset="utf-8">
+	var setMapSize = function () {
+		var bodyHeight = $('body').height();
+		$('#content .bd').height( bodyHeight - 174).width( ($('body').width() - 57) )	
+	}
+	$(window).resize(function() {
+		setMapSize();
+	});
+	setMapSize();
+</script>
+<div id="standardSize">
+
+</div>

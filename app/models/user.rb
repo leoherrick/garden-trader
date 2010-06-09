@@ -10,5 +10,6 @@ class User < ActiveRecord::Base
   has_one :address, :dependent => :destroy
   belongs_to :neighborhood
   validates_associated :address
+  has_attached_file :avatar
   
 end

@@ -15,7 +15,7 @@
   puts "cleared all crops"
   
   
-@user1 = User.create(:email => "leoherrick@gmail.com", :password => "test12", :username => "Leo Herrick")
+@user1 = User.create(:email => "leoherrick@gmail.com", :password => "test12")
 @user2 = User.create(:email => "test1@test.com", :password => "test12")
 @user3 = User.create(:email => "test2@test.com", :password => "test12")
 @user4 = User.create(:email => "test3@test.com", :password => "test12")
@@ -35,6 +35,12 @@
     :planted_date => "1/1/10",
     :quantity => "12 Bags"
   )
+  @user1.crops.create(
+    :food_type_id => FoodType.find_by_name("Carrots").id,
+    :planted_date => "1/1/10",
+    :quantity => "15 bunches"
+  )
+  
   @user1.update_attribute(:username, "Leo Herrick")
   @user1.update_attribute(:neighborhood, Neighborhood.find_by_name("Shafter") )
   puts "added " + @user1.username
@@ -55,7 +61,7 @@
     :zip => "94618",
     :street_address => "5300 College Ave."
   )  
-  @user3.update_attribute(:username, "The O'Leerys")
+  @user3.update_attribute(:username, "Carrot Master Jack")
   @user3.update_attribute(:neighborhood, Neighborhood.find_by_name("Rockridge") )
   puts "added " + @user3.username
   
@@ -65,7 +71,7 @@
     :zip => "94618",
     :street_address => "5700 College Ave."
   )  
-  @user4.update_attribute(:username, "Mary Hampton")
+  @user4.update_attribute(:username, "Pete Smith")
   @user4.update_attribute(:neighborhood, Neighborhood.find_by_name("Rockridge") )
   puts "added " + @user4.username
   
@@ -88,7 +94,7 @@
     :zip => "94618",
     :street_address => "5425 Clifton Ave."
   )  
-  @user6.update_attribute(:username, "Rick Smith")
+  @user6.update_attribute(:username, "Mike123")
   @user6.update_attribute(:neighborhood, Neighborhood.find_by_name("Shafter") )
   puts "added " + @user6.username
 
@@ -98,7 +104,7 @@
     :zip => "94618",
     :street_address => "5800 Ocean View Dr."
   )  
-  @user7.update_attribute(:username, "Tom and Benji")
+  @user7.update_attribute(:username, "Twisty Dee")
   @user7.update_attribute(:neighborhood, Neighborhood.find_by_name("Rockridge") )
   puts "added " + @user7.username
 

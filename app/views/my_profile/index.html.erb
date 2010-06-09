@@ -1,0 +1,100 @@
+
+<div id="standardSize">
+	<h2>Leo Herrick</h2>
+		<div id="avatar">
+			<img src="images/blank_avatar_male.jpg" class="offsetImage"/>
+			<button type="button" id="updateAvatar">update</button>
+		</div>	
+		
+		<div id="my_badges">
+			<img src="images/badges/cup.png" class="badge" alt="Best Blueberries">
+			<img src="images/badges/star.png" class="badge" alt="Best Blueberries">
+			<img src="images/badges/road_sign.png" class="badge" alt="Best Blueberries">			
+			<img src="images/badges/ribbon.png" class="badge" alt="Best Blueberries">			
+		</div>
+		<div id="my_stats" class="tile">
+			<strong>Member Since: </strong>6/2/2010<br />
+			<strong>Total Items: </strong>13<br />
+			<strong>Trades: </strong>n/a<br />
+			
+		</div>
+
+
+<div id="contentColTwo" style="position:absolute; margin-left:30%; top:0">
+	<div id="my_followers" class="tile">
+		<h2>Followers</h2>
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon"><br />
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
+		<%= link_to "more...", root_url %>
+	</div>
+	
+	<div id="my_garden" class="tile">
+		<h2>Recent Garden Items</h2>
+		<img src="images/food_icons/blueberries.gif" class="smallIcon">Blue Berries  - 4/23<br/>
+		<img src="images/food_icons/arugula.jpg" class="smallIcon">Arugula - 3/05<br/>
+		<img src="images/food_icons/thyme.jpeg" class="smallIcon">Thyme - 3/05<br/>
+		<img src="images/food_icons/lemon.png" class="smallIcon">Lemons - 3/05<br/>
+		<%= link_to "more...", root_url %>
+	</div>
+
+
+</div>
+
+<div id="contentColThree" style="position:absolute; margin-left:70%; top:0">
+	<div id="my_updates" class="tile">
+		<h2>Updates</h2>
+		<div id="dateIcon">
+			<span class="dateNumber">10</span>
+			<img src="images/cal.png" class="smallIcon">Added new photos to blueberries<br/>			
+		</div>
+		<div id="dateIcon">
+			<span class="dateNumber">07</span>
+			<img src="images/cal.png" class="smallIcon">Traded Arugula<br/>			
+		</div>
+		
+	</div>
+	<div id="my_wall" class="tile">
+		<h2>Wall</h2>
+		<div class="avatarSmall"><img src="images/blank_avatar_male.jpg" class="smallFollowerIcon" /></div>	
+		<p class="comment"><strong>Jane Says:</strong>Those blue berries look amazing. Keep up the good work.</p>
+		<div class="avatarSmall"><img src="images/blank_avatar_male.jpg" class="smallFollowerIcon" /></div>	
+		<p classstrong="comment"><strong>The Carrot Wizard Says:</strong>Yo, thanks for the arugula the other day. Freshness like that can't be found at the supermarket</p>
+		
+	</div>
+</div>
+</div>
+
+<script type="text/javascript" charset="utf-8">
+	var setMapSize = function () {
+		var bodyHeight = $('body').height();
+		$('#content .bd').height( bodyHeight - 174).width( ($('body').width() - 57) )	
+	}
+	$(window).resize(function() {
+		setMapSize();
+	});
+	setMapSize();
+	$('.smallFollowerIcon').each(function(){
+		var rotation = Math.ceil(Math.random()*7)-4
+		$(this).addClass('smallShadow').css("-webkit-transform", "rotate("+rotation+"deg)")
+	})
+	$('#avatar').mouseover(function(){
+		$('#updateAvatar').show();
+	})
+	$('#avatar').mouseout(function(){
+		$('#updateAvatar').hide();
+	})
+	$('#updateAvatar').mouseover(function(){
+		$(this).css("background-color", "gray").css("cursor", "pointer")
+	})
+	$('#updateAvatar').mouseout(function(){
+		$(this).css("background-color", "white")
+	})
+	
+</script>

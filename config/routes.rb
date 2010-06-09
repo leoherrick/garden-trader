@@ -56,7 +56,7 @@ GardenTrader::Application.routes.draw do |map|
   #   end
 
   match 'my_profile' => 'my_profile#index'
-  match 'my_mail' => 'my_mail#index'
+  match 'my_messages' => 'my_messages#index'
   match 'my_garden' => 'my_garden#index'
   match 'my_neighborhood' => 'my_neighborhood#index'
   match 'the_marketplace' => 'the_marketplace#index'
