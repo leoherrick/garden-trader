@@ -21,4 +21,4 @@ www.garden-trader.org
 
 == Technical Note
 
-I began development on this site over a year ago and development was not test driven. Am I proud of this? No. Is it a royal pain in the neck now that I'm looking to pick the project back up after months of inactivity? Yes. Over the next few months, I plan on building in tests with Rspec... so hopefully the application will be tighter, I can delete this section of the rdoc, this developer can rest easier, and all will be right with the world
+I began development on this site over a year ago and development was not test driven. Am I proud of this? No. Is it a royal pain in the neck now that I'm looking to get back on the horse and work w/ it again? Yep. Over the next few months I will chip away... and some quality Rspec. Hopefully the app will be tighter, I can delete this section of the rdoc, I can rest easier, and all will be right with the world.
