@@ -11,8 +11,8 @@ GardenTrader::Application.routes.draw do |map|
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-  match "my_neighborhood/user_panel/:user_id" => "my_neighborhood#user_panel"
-  match "my_neighborhood/neighborhood_panel/:neighborhood_id" => "my_neighborhood#neighborhood_panel"
+  match "my_neighborhood/user_panel/:user_id", :to => "my_neighborhood#user_panel"
+  match "my_neighborhood/neighborhood_panel/:neighborhood_id", :to => "my_neighborhood#neighborhood_panel"
 
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
@@ -55,13 +55,13 @@ GardenTrader::Application.routes.draw do |map|
   #     resources :products
   #   end
 
-  match 'my_profile' => 'my_profile#index'
-  match 'my_messages' => 'my_messages#index'
-  match 'my_garden' => 'my_garden#index'
-  match 'my_neighborhood' => 'my_neighborhood#index'
-  match 'the_marketplace' => 'the_marketplace#index'
-  match 'the_community' => 'the_community#index'
-  match 'garden_trader' => 'garden_trader#index'
+  match 'my_profile', :to => 'my_profile#index'
+  match 'my_messages', :to => 'my_messages#index'
+  match 'my_garden', :to => 'my_garden#index'
+  match 'my_neighborhood', :to => 'my_neighborhood#index'
+  match 'the_marketplace', :to => 'the_marketplace#index'
+  match 'the_community', :to => 'the_community#index'
+  match 'garden_trader', :to => 'garden_trader#index'
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
