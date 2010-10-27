@@ -15,3 +15,6 @@ I have begun to collect neighborhood data, and have hooked it into the Google ma
 = How to get involved
 
 If you would like to help me with the project, please send a note to my profile and I'd be glad to add you as a collaborator. 
+
+=== Visit us at:
+www.garden-trader.org
