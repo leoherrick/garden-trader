@@ -4,6 +4,7 @@ class MyNeighborhoodController < ActionController::Base
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
   layout "gardentrader", :except => ['user_panel', 'neighborhood_panel']
 
+  # The index page shows a user other users in the neighborhood. 
   def index
     @title = 'My Neighborhood'  
   end

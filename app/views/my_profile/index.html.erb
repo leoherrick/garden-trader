@@ -7,12 +7,13 @@
 		</div>	
 		
 		<div id="my_badges">
-			<img src="images/badges/cup.png" class="badge" alt="Best Blueberries">
-			<img src="images/badges/star.png" class="badge" alt="Best Blueberries">
-			<img src="images/badges/road_sign.png" class="badge" alt="Best Blueberries">			
-			<img src="images/badges/ribbon.png" class="badge" alt="Best Blueberries">			
+			<div class="badge-icon cup"></div>
+			<div class="badge-icon star"></div>
+			<div class="badge-icon road_sign"></div>
+			<div class="badge-icon ribbon"></div>
+			<br class="clear" />
 		</div>
-		<div id="my_stats" class="tile">
+		<div id="my_stats">
 			<strong>Member Since: </strong>6/2/2010<br />
 			<strong>Total Items: </strong>13<br />
 			<strong>Trades: </strong>n/a<br />
@@ -20,9 +21,10 @@
 		</div>
 
 
-<div id="contentColTwo" style="position:absolute; margin-left:30%; top:0">
+<div id="contentColTwo" style="position:absolute; margin-left:25%; top:0">
 	<div id="my_followers" class="tile">
 		<h2>Followers</h2>
+		<a href="#" style="position:absolute; right:1px">more >></a>
 		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
 		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
 		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
@@ -32,22 +34,22 @@
 		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
 		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
 		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
-		<%= link_to "more...", root_url %>
+		<img src="images/blank_avatar_male.jpg" class="smallFollowerIcon">
 	</div>
 	
 	<div id="my_garden" class="tile">
 		<h2>Recent Garden Items</h2>
-		<img src="images/food_icons/blueberries.png" class="smallIcon">Blue Berries  - 4/23<br/>
-		<img src="images/food_icons/arugula.png" class="smallIcon">Arugula - 3/05<br/>
-		<img src="images/food_icons/thyme.png" class="smallIcon">Thyme - 3/05<br/>
-		<img src="images/food_icons/lemon.png" class="smallIcon">Lemons - 3/05<br/>
-		<%= link_to "more...", root_url %>
+		<a href="#" style="position:absolute; right:1px">more >></a>
+		<div class="food-icon-small bluberries"></div><div class="food-description">Blue Berries  - 4/23</div><br class="clear" />
+		<div class="food-icon-small arugula"></div><div class="food-description">Arugula  - 4/23</div><br class="clear" />
+		<div class="food-icon-small thyme"></div><div class="food-description">Thyme  - 4/23</div><br class="clear" />
+		<div class="food-icon-small lemons"></div><div class="food-description">Lemons  - 4/23</div><br class="clear" />
 	</div>
 
 
 </div>
 
-<div id="contentColThree" style="position:absolute; margin-left:70%; top:0">
+<div id="contentColThree" style="position:absolute; margin-left:60%; top:0">
 	<div id="my_updates" class="tile">
 		<h2>Updates</h2>
 		<div id="dateIcon">

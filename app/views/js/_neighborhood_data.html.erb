@@ -31,8 +31,8 @@
 	
 	// set up hoods
 	// declare which hoods to map
-	// Neighborhood.find(:all).collect{|x| x.name}.each do |hood| 
-	 <% ["Rockridge","Shafter","Temescal"].each do |hood| %>
+	<% Neighborhood.find(:all).collect{|x| x.name}.each do |hood| %>
+	// ["Rockridge","Shafter","Temescal"].each do |hood| 
 		
 		// build points for one set of the hoods
 		<% latLonArray = [] %>

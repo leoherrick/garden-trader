@@ -219,7 +219,6 @@ margin-bottom:.75em;
 }
 
 #content > div.bd h2 {
-margin:20px 0 10px;
 }
 
 #content ul {
@@ -340,10 +339,15 @@ margin-left:40px;
 }
 
 .tile {
+	width:275px;
+	margin-top:1em;
 	font-size:.8em;
 }
-.tile > h3 {
-	font-size:.9em;
+#content > div.bd .tile > h2 {
+	padding:0em .25em;
+	background-color: #d5edd5;
+	font-size:1.1em;
+	margin:0 0 .5em;
 }
 .smallIcon{
 	width:30px;
@@ -361,6 +365,7 @@ margin-left:40px;
 	margin-right:5px;
 }
 .clear {
+	clear:both;
 	padding:0;
 	margin:0;
 }
@@ -389,15 +394,44 @@ margin-left:40px;
 }
 .dateMonth {
 	color:white;
-	font-size:5pt;
-	top:0px;
-	left:1px;
+	font-size:7pt;
+	top:-5px;
+	left:7px;
 	position:absolute;
 	z-index:100;
 }
 .dateNumber {
-	top:9px;
+	top:8px;
 	left:7px;
 	position:absolute;
 	z-index:100;
+}
+.badge-icon {
+	margin-right:5px;
+	float:left;
+	width:40px;
+	height:40px;
+	background-image:url(/images/badge_icons.png);
+}
+.badge-icon.cup {background-position:-40px -40px;}
+.badge-icon.star {background-position:0px 0px;}
+.badge-icon.road_sign {background-position:-40px 0px;}
+.badge-icon.ribbon {background-position:0px -40px;}
+.food-icon-small {
+	margin-right:5px;
+	float:left;
+	width:30px;
+	height:30px;
+	background-image:url(/images/food_icons.png);
+}
+.food-description { float:left;}
+.food-icon-small.thyme {background-position:0px 0px;}
+.food-icon-small.bluberries {background-position:-60px 0px;}
+.food-icon-small.lemons {background-position:-30px 0px;}
+.food-icon-small.arugula {background-position:-90px 0px;}
+.food-icon-small.carrots {background-position:0px -30px;}
+
+.picPreview { margin-left:35px; }
+.picPreview img {
+	margin-right:10px;
 }

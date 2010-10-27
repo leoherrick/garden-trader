@@ -1,4 +1,5 @@
-<h2>Sign in</h2>
+<div id="standardSize">
+	<h2>Sign in</h2>
 
 <%= form_for(resource_name, resource, :url => session_path(resource_name)) do |f| %>
   <p><%= f.label :email %></p>
@@ -15,3 +16,4 @@
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
+</div>
